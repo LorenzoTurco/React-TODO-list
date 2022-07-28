@@ -1,16 +1,14 @@
 import './Header.scss';
 
-const Header =() => {
+const Header =({resetTasks}) => {
   return (
     <div className="header">
 
 
     <h2 className = "header__title">My Todos</h2>
 
-    <button>Reset</button>
+    <button onClick={resetTasks}>Reset</button>
 
-      
- 
     </div>
   );
 }
