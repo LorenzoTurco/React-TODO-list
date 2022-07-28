@@ -11,13 +11,30 @@ const TodoList = () =>{
 
     const addTask = () =>{
 
-        setTaskList([newTask] + taskList)
+        console.log(taskList)
+        setTaskList([...taskList, {task: newTask, key: taskList.length}])
+    }
+
+    const deleteTask = (id) =>{
+
+      
+
+      setTaskList(taskList.filter((task) => task.key != id))
     }
 
     const handleChange = event =>{
         setNewTask(event.target.value)
-        console.log(taskList)
     }
+
+
+
+    const drawTasks = taskList.map((task) => {
+        return(
+            <TodoItem deleteHandler={deleteTask}text={task.task} key={task.key} id={task.key}></TodoItem>
+        )
+    })
+
+
 
 
   return (
@@ -27,6 +44,8 @@ const TodoList = () =>{
 
         <input type="text" onChange={handleChange} value={newTask} placeholder="Add your task here..."></input>
         <button onClick={addTask}>Submit</button>
+
+        <TodoItem list={taskList} deleteHandler={deleteTask}></TodoItem>
     
     
     </div>

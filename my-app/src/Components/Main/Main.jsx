@@ -1,15 +1,22 @@
 
 import './Main.scss';
+import TodoList from './TodoList/TodoList'
+import {useState, useEffect} from 'react'
 
 
 const Main = () =>{
+
+    const [taskList, setTaskList] = useState([]);
+    const [newTask, setNewTask] = useState("");
+
+   useEffect(() =>{ 
+        
+      },[newTask])
+
   return (
-    <div className="app">
+    <div className="main">
 
-
-      <Header/>
-
-      <Main></Main>
+      <TodoList taskList = {taskList} newTask = {newTask}setTaskList= {setTaskList} setNewTask={setNewTask}/>
  
     </div>
   );
