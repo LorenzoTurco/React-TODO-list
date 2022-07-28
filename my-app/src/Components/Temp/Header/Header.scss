@@ -1,5 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&display=swap');
+
 .header{
     display:flex;
     justify-content:space-between;
+    align-items:center;
+
+
+    .header__title{
+
+        font-family: "Jost";
+        font-weight: 600;
+        font-size: 2rem
+    }
+
+
+    .header__button-container{        
+
+    .header__button{
+    font-family: "Jost";
+    font-weight: 500;
+    border:2px solid black;
+    border-radius: 10%;
+    font-size: 1rem;
+    padding:0.5rem;
+    background-color:white;
+    }
+}
 }
 

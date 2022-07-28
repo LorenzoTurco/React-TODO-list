@@ -7,8 +7,10 @@ const Header =({resetTasks}) => {
 
     <h2 className = "header__title">My Todos</h2>
 
-    <button onClick={resetTasks}>Reset</button>
 
+    <div className="header__button-container">
+      <button className="header__button"onClick={resetTasks}>Reset</button>
+    </div>
     </div>
   );
 }
