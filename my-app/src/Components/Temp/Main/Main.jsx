@@ -4,6 +4,7 @@ import SingleTodoItem from '../SingleTodoItem/SingleTodoItem'
 import Header from '../Header/Header'
 import {useState} from 'react'
 import { BsPlusCircleFill } from "react-icons/bs";
+import {FaHandPointer} from "react-icons/fa"
 
 
 
@@ -17,9 +18,8 @@ const Main = () =>{
   }
 
     const addTask = (event) =>{
-      console.log(event)
       newTask.length == 0 ? alert("Empty") : setTaskList([...taskList, {task: newTask, key: taskList.length}])
-      
+      setNewTask("");
     }
 
     const deleteTask = (id) =>{
@@ -65,7 +65,7 @@ const Main = () =>{
 
       {taskList.length == 0 &&
         <div className="">
-          Nothing to see here yet... Add a task in the fields above!
+          Nothing to see here yet... Add a task in the fields above! <FaHandPointer/>
         </div>}
     
     </div>
