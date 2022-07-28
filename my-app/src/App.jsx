@@ -1,8 +1,6 @@
-import logo from './logo.svg';
 import './App.scss';
 import Header from './Components/Header/Header'
-import TodoList from './Components/Main/TodoList/TodoList'
-import Main from './Components/Main/Main';
+import TodoList from './Components/Temp/TodoList/TodoList'
 
 const App = () =>{
 
