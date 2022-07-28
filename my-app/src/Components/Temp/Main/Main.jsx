@@ -18,7 +18,7 @@ const Main = () =>{
 
   //adds a task
     const addTask = () =>{
-      newTask.length == 0 ? alert("Empty") : setTaskList([...taskList, {task: newTask, key: taskList.length}])
+      newTask.length == 0 ? alert("Please enter a todo") : setTaskList([...taskList, {task: newTask, key: taskList.length}])
       setNewTask("");
     }
 
