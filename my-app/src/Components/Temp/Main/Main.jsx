@@ -6,30 +6,33 @@ import {useState} from 'react'
 import { BsPlusCircleFill } from "react-icons/bs";
 import {FaHandPointer} from "react-icons/fa"
 
-
-
 const Main = () =>{
 
     const [taskList, setTaskList] = useState([]);
     const [newTask, setNewTask] = useState("");
 
+  //removes every task
   const resetTasks =() =>{
     setTaskList([]);
   }
 
-    const addTask = (event) =>{
+  //adds a task
+    const addTask = () =>{
       newTask.length == 0 ? alert("Empty") : setTaskList([...taskList, {task: newTask, key: taskList.length}])
       setNewTask("");
     }
 
+    //deletes a task
     const deleteTask = (id) =>{
       setTaskList(taskList.filter((task) => task.key != id))
     }
 
+    //stores value from the input bar
     const handleChange = event =>{
         setNewTask(event.target.value)
     }
 
+    //creates the list of tasks
     const mappedList = taskList.map(item => {
 
       return (
@@ -42,8 +45,6 @@ const Main = () =>{
       )
   })
 
-
-//TODO: PUT SEARCH BAR INTO NEW COMPONENT
   return (
 
     <>

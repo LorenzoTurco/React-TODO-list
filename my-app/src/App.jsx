@@ -4,13 +4,11 @@ import Main from './Components/Temp/Main/Main'
 
 const App = () =>{
 
-  
-
   return (
     <div className="app">
 
       <Main></Main>
- 
+
     </div>
   );
 }

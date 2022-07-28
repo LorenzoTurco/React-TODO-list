@@ -6,6 +6,7 @@ import { FaTrashAlt } from "react-icons/fa";
 const SingleTodoItem = ({id, text, deleteHandler}) =>{
   const [checked, setChecked] = useState(false);
 
+  //switches state of checkbox
   const handleCheck = () =>{
    checked ? setChecked(false) : setChecked(true);
   }
