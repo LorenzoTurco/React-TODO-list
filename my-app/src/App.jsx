@@ -1,6 +1,6 @@
 import './App.scss';
 import Header from './Components/Header/Header'
-import TodoList from './Components/Temp/TodoList/TodoList'
+import Main from './Components/Temp/Main/Main'
 
 const App = () =>{
 
@@ -10,7 +10,7 @@ const App = () =>{
 
       <Header/>
 
-      <TodoList></TodoList>
+      <Main></Main>
  
     </div>
   );
